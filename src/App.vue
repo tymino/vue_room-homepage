@@ -42,7 +42,6 @@ import ToggleImage from '@/components/ToggleImage.vue';
   grid-column: 43 / 51;
   grid-row: 18 / 21;
   width: 100%;
-  border: 1px solid black;
 }
 
 .content__toggle-describe {
