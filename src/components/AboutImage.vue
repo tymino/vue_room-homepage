@@ -6,13 +6,9 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from 'vue';
-
 interface IProps {
   imgName: string;
 }
 
 defineProps<IProps>();
 </script>
-
-<style scoped></style>

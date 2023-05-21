@@ -16,10 +16,6 @@ import ToggleButtons from '@/components/ToggleButtons.vue';
 import ToggleDescribe from '@/components/ToggleDescribe.vue';
 import AboutDescribe from '@/components/AboutDescribe.vue';
 import ToggleImage from '@/components/ToggleImage.vue';
-
-// import { ref } from 'vue';
-
-// const text = ref('Hello');
 </script>
 
 <style lang="scss">
@@ -28,8 +24,9 @@ import ToggleImage from '@/components/ToggleImage.vue';
   display: grid;
   grid-template-columns: repeat(72, 1fr);
   grid-template-rows: repeat(30, 1fr);
+  height: 100vh;
 
-  background: orangered;
+  background: var(--color-background);
 }
 
 .content__toggle-image {
