@@ -1,8 +1,15 @@
 <template>
   <div class="content">
-    <ToggleImage class="content__toggle-image" />
-    <ToggleButtons class="content__toggle-buttons" />
-    <ToggleDescribe class="content__toggle-describe" />
+    <ToggleImage class="content__toggle-image" :activeSlide="activeSlide" />
+    <ToggleButtons
+      class="content__toggle-buttons"
+      @prevSlide="prevSlide"
+      @nextSlide="nextSlide"
+    />
+    <ToggleDescribe
+      class="content__toggle-describe"
+      :activeDescribe="activeDescribe"
+    />
 
     <AboutImage class="content__about-dark" imgName="dark" />
     <AboutDescribe class="content__about-describe" />
@@ -16,6 +23,13 @@ import ToggleButtons from '@/components/ToggleButtons.vue';
 import ToggleDescribe from '@/components/ToggleDescribe.vue';
 import AboutDescribe from '@/components/AboutDescribe.vue';
 import ToggleImage from '@/components/ToggleImage.vue';
+
+import { useSlider } from '@/composables/useSlider';
+
+const { activeSlide, activeDescribe, switchSlide } = useSlider();
+
+const prevSlide = () => switchSlide(-1);
+const nextSlide = () => switchSlide(1);
 </script>
 
 <style lang="scss">

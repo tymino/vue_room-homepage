@@ -1,15 +1,25 @@
 <template>
   <div class="container">
-    <button>
+    <button @click="handleLeft">
       <img src="@/assets/images/icon-angle-left.svg" alt="angle-left" />
     </button>
-    <button>
+    <button @click="handleRight">
       <img src="@/assets/images/icon-angle-right.svg" alt="angle-right" />
     </button>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+interface IEmits {
+  (e: 'prevSlide'): void;
+  (e: 'nextSlide'): void;
+}
+
+const emit = defineEmits<IEmits>();
+
+const handleLeft = () => emit('prevSlide');
+const handleRight = () => emit('nextSlide');
+</script>
 
 <style lang="scss" scoped>
 .container {
@@ -29,7 +39,7 @@
     cursor: pointer;
 
     &:hover {
-      background: var(--color-dark-gray);
+      background: var(--color-hover);
     }
 
     & > img {

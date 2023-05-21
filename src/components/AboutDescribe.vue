@@ -33,9 +33,4 @@
   letter-spacing: 4px;
   text-transform: uppercase;
 }
-
-.text {
-  color: var(--color-dark-gray);
-  line-height: 1.4rem;
-}
 </style>

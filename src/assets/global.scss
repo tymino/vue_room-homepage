@@ -7,8 +7,8 @@
 
   --color-text: hsl(0, 0%, 0%);
   --color-background: hsl(0, 0%, 100%);
-  --color-dark-gray: hsl(0, 0%, 63%);
-  --color-very-dark-gray: hsl(0, 0%, 63%);
+  --color-describe: hsl(0, 0%, 63%);
+  --color-hover: hsl(0, 0%, 63%);
 
   --transition-time: 0.4s;
 }
@@ -23,6 +23,11 @@ html {
   font-size: var(--font-size);
   font-family: var(--font-family);
   background: var(--color-very-dark-gray);
+}
+
+p {
+  color: var(--color-dark-gray);
+  line-height: 1.4rem;
 }
 
 img {
