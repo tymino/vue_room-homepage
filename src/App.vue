@@ -94,6 +94,10 @@ const nextSlide = () => switchSlide(1);
     grid-template-rows: repeat(7, 1fr);
   }
 
+  .content__navmenu {
+    top: 4%;
+  }
+
   .content__toggle-image {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
