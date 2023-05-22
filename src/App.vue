@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <NavMenu class="content__navmenu" />
     <ToggleImage class="content__toggle-image" :activeSlide="activeSlide" />
     <ToggleButtons
       class="content__toggle-buttons"
@@ -18,10 +19,11 @@
 </template>
 
 <script lang="ts" setup>
+import AboutDescribe from '@/components/AboutDescribe.vue';
 import AboutImage from '@/components/AboutImage.vue';
+import NavMenu from '@/components/NavMenu.vue';
 import ToggleButtons from '@/components/ToggleButtons.vue';
 import ToggleDescribe from '@/components/ToggleDescribe.vue';
-import AboutDescribe from '@/components/AboutDescribe.vue';
 import ToggleImage from '@/components/ToggleImage.vue';
 
 import { useSlider } from '@/composables/useSlider';
@@ -43,6 +45,15 @@ const nextSlide = () => switchSlide(1);
   background: var(--color-background);
 }
 
+.content__navmenu {
+  position: absolute;
+  left: 8%;
+  top: 10%;
+
+  grid-column: 1 / 43;
+  grid-row: 1 / 21;
+}
+
 .content__toggle-image {
   grid-column: 1 / 43;
   grid-row: 1 / 21;
@@ -50,8 +61,8 @@ const nextSlide = () => switchSlide(1);
 
 .content__toggle-buttons {
   position: absolute;
-  right: 0%;
-  bottom: 0%;
+  right: 0;
+  bottom: 0;
 
   grid-column: 43 / 51;
   grid-row: 18 / 21;
