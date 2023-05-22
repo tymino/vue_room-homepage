@@ -2,7 +2,7 @@
   <picture>
     <source
       :srcset="require(`@/assets/images/mobile-image-hero-${activeSlide}.jpg`)"
-      media="(max-width: 720px)"
+      media="(max-width: 1200px)"
     />
     <img
       :src="require(`@/assets/images/desktop-image-hero-${activeSlide}.jpg`)"

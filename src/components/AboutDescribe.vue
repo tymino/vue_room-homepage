@@ -29,7 +29,7 @@
 }
 
 .title {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   letter-spacing: 4px;
   text-transform: uppercase;
 }

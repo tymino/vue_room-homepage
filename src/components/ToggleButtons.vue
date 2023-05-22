@@ -30,7 +30,7 @@ const handleRight = () => emit('nextSlide');
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px 0px;
+    padding: 16px 0px;
 
     background: var(--color-text);
     border: none;

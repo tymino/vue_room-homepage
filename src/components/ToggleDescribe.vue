@@ -34,14 +34,14 @@ defineProps<IProps>();
 }
 
 .title {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-size: 2.6rem;
 }
 
 .button {
   display: flex;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 20px;
 
   background: none;
   border: none;
@@ -70,6 +70,18 @@ defineProps<IProps>();
 
     & > img {
       opacity: 0.4;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .button {
+    & > span {
+      font-size: 0.9rem;
     }
   }
 }

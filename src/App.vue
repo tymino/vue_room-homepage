@@ -76,4 +76,44 @@ const nextSlide = () => switchSlide(1);
   grid-column: 51 / 73;
   grid-row: 21 / 31;
 }
+
+@media (max-width: 975px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+  }
+
+  .content__toggle-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .content__toggle-buttons {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    width: 20%;
+    min-width: 110px;
+  }
+
+  .content__toggle-describe {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    padding: 60px 0;
+  }
+
+  .content__about-dark {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
+  .content__about-describe {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+    padding: 60px 0;
+  }
+
+  .content__about-light {
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+  }
+}
 </style>
